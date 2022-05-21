@@ -1,0 +1,48 @@
+.policy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.policy__text {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  color: #757575;
+}
+
+.policy__icon {
+  display: flex;
+  margin-right: 8px;
+  align-items: center;
+  justify-content: center;
+
+  width: 16px;
+  height: 15px;
+
+  border: 1.9px solid #212121;
+  border-radius: 2px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  fill: transparent;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  .policy__input:checked + .policy__text & {
+    background-color: $accentColor;
+    border: transparent;
+    box-shadow: none;
+    fill: $iconFillSecondColor;
+  }
+  .policy__input:focus + .policy__text & {
+    border-color: $accentColor;
+  }
+}
+
+.policy__link {
+  text-decoration: underline;
+  color: $accentColor;
+}
