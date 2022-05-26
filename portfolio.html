@@ -26,6 +26,18 @@
         <a href="" class="logo header__logo link"
           ><span class="logo__accent">Web</span>Studio</a
         >
+        <button type="button" class="menu-open-btn menu-btn">
+          <svg
+            width="40"
+            height="40"
+            aria-level="Переключатель мобильного меню"
+          >
+            <use
+              class="menu-icon menu-open-icon"
+              href="./images/icons.svg#icon-open-menu"
+            ></use>
+          </svg>
+        </button>
         <nav>
           <ul class="header__nav list">
             <li class="header__item">
@@ -71,6 +83,69 @@
           </li>
         </ul>
       </div>
+      <div class="menu is-hidden">
+        <button type="button" class="menu-close-btn menu-btn">
+          <svg
+            width="40"
+            height="40"
+            aria-level="Переключатель мобильного меню"
+          >
+            <use
+              class="menu-icon menu--close-icon"
+              href="./images/icons.svg#icon-close-menu"
+            ></use>
+          </svg>
+        </button>
+        <nav>
+          <ul class="menu__nav list">
+            <li class="menu__item">
+              <a href="./index.html" class="menu__link menu__link--nav link"
+                >Студия</a
+              >
+            </li>
+            <li class="menu__item">
+              <a
+                href="./portfolio.html"
+                class="menu__link menu__link--nav link menu__link--current"
+                >Портфолио</a
+              >
+            </li>
+            <li class="menu__item">
+              <a href="" class="menu__link menu__link--nav link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="menu__wrap">
+          <ul class="menu__contact list">
+            <li class="menu__data">
+              <a href="tel:+380961111111" class="menu__link menu__tel link"
+                >+38 096 111 11 11</a
+              >
+            </li>
+            <li class="menu__data">
+              <a
+                href="mailto:info@devstudio.com"
+                class="menu__link menu__mail link"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="menu__soc list">
+            <li class="menu__soc-item">
+              <a href="" class="menu__soc-link link">Instagram</a>
+            </li>
+            <li class="menu__soc-item">
+              <a href="" class="menu__soc-link link">Twitter</a>
+            </li>
+            <li class="menu__soc-item">
+              <a href="" class="menu__soc-link link">Facebook</a>
+            </li>
+            <li class="menu__soc-item">
+              <a href="" class="menu__soc-link link">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </header>
     <main>
       <section class="portfolio section">
@@ -102,13 +177,35 @@
             <li class="product">
               <a href="" class="product__link link">
                 <div class="product__wrap">
-                  <img
-                    src="./images/img-portfolio-1.jpg"
-                    alt="пример веб-сайта Технокряк"
-                    width="370"
-                    height="294"
-                    class="product__img"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/img-portfolio-1.jpg    1x,
+                        ./images/img-portfolio-1-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/img-portfolio-1-tab.jpg    1x,
+                        ./images/img-portfolio-1-tab-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/img-portfolio-1-mob.jpg    1x,
+                        ./images/img-portfolio-1-mob-2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/img-portfolio-1-mob.jpg"
+                      alt="пример веб-сайта Технокряк"
+                      class="product__img"
+                    />
+                  </picture>
+
                   <div class="product__overlay">
                     <p class="product__description">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -128,13 +225,35 @@
             <li class="product">
               <a href="" class="product__link link">
                 <div class="product__wrap">
-                  <img
-                    src="./images/img-portfolio-2.jpg"
-                    alt="пример постера"
-                    width="370"
-                    height="294"
-                    class="product__img"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/img-portfolio-2.jpg    1x,
+                        ./images/img-portfolio-2-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/img-portfolio-2-tab.jpg    1x,
+                        ./images/img-portfolio-2-tab-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/img-portfolio-2-mob.jpg    1x,
+                        ./images/img-portfolio-2-mob-2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/img-portfolio-2-mob.jpg"
+                      alt="пример постера"
+                      class="product__img"
+                    />
+                  </picture>
+
                   <div class="product__overlay">
                     <p class="product__description">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -155,13 +274,35 @@
             <li class="product">
               <a href="" class="product__link link">
                 <div class="product__wrap">
-                  <img
-                    src="./images/img-portfolio-3.jpg"
-                    alt="лого ресторана"
-                    width="370"
-                    height="294"
-                    class="product__img"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/img-portfolio-3.jpg    1x,
+                        ./images/img-portfolio-3-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/img-portfolio-3-tab.jpg    1x,
+                        ./images/img-portfolio-3-tab-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/img-portfolio-3-mob.jpg    1x,
+                        ./images/img-portfolio-3-mob-2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/img-portfolio-3-mob.jpg"
+                      alt="лого ресторана"
+                      class="product__img"
+                    />
+                  </picture>
+
                   <div class="product__overlay">
                     <p class="product__description">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -183,13 +324,34 @@
             <li class="product">
               <a href="" class="product__link link">
                 <div class="product__wrap">
-                  <img
-                    src="./images/img-portfolio-4.jpg"
-                    alt="большие наушники"
-                    width="370"
-                    height="294"
-                    class="product__img"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/img-portfolio-4.jpg    1x,
+                        ./images/img-portfolio-4-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/img-portfolio-4-tab.jpg    1x,
+                        ./images/img-portfolio-4-tab-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/img-portfolio-4-mob.jpg    1x,
+                        ./images/img-portfolio-4-mob-2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/img-portfolio-4-mob.jpg"
+                      alt="большие наушники"
+                      class="product__img"
+                    />
+                  </picture>
                   <div class="product__overlay">
                     <p class="product__description">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -211,13 +373,34 @@
             <li class="product">
               <a href="" class="product__link link">
                 <div class="product__wrap">
-                  <img
-                    src="./images/img-portfolio-5.jpg"
-                    alt="белая и коричневая коробка"
-                    width="370"
-                    height="294"
-                    class="product__img"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/img-portfolio-5.jpg    1x,
+                        ./images/img-portfolio-5-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/img-portfolio-5-tab.jpg    1x,
+                        ./images/img-portfolio-5-tab-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/img-portfolio-5-mob.jpg    1x,
+                        ./images/img-portfolio-5-mob-2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/img-portfolio-5-mob.jpg"
+                      alt="белая и коричневая коробка"
+                      class="product__img"
+                    />
+                  </picture>
                   <div class="product__overlay">
                     <p class="product__description">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -239,13 +422,35 @@
             <li class="product">
               <a href="" class="product__link link">
                 <div class="product__wrap">
-                  <img
-                    src="./images/img-portfolio-6.jpg"
-                    alt="пример веб-сайта"
-                    width="370"
-                    height="294"
-                    class="product__img"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/img-portfolio-6.jpg    1x,
+                        ./images/img-portfolio-6-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/img-portfolio-6-tab.jpg    1x,
+                        ./images/img-portfolio-6-tab-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/img-portfolio-6-mob.jpg    1x,
+                        ./images/img-portfolio-6-mob-2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/img-portfolio-6-mob.jpg"
+                      alt="пример веб-сайта"
+                      class="product__img"
+                    />
+                  </picture>
+
                   <div class="product__overlay">
                     <p class="product__description">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -267,13 +472,34 @@
             <li class="product">
               <a href="" class="product__link link">
                 <div class="product__wrap">
-                  <img
-                    src="./images/img-portfolio-7.jpg"
-                    alt="журнал с дизайном"
-                    width="370"
-                    height="294"
-                    class="product__img"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/img-portfolio-7.jpg    1x,
+                        ./images/img-portfolio-7-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/img-portfolio-7-tab.jpg    1x,
+                        ./images/img-portfolio-7-tab-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/img-portfolio-7-mob.jpg    1x,
+                        ./images/img-portfolio-7-mob-2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/img-portfolio-7-mob.jpg"
+                      alt="журнал с дизайном"
+                      class="product__img"
+                    />
+                  </picture>
                   <div class="product__overlay">
                     <p class="product__description">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -295,13 +521,35 @@
             <li class="product">
               <a href="" class="product__link link">
                 <div class="product__wrap">
-                  <img
-                    src="./images/img-portfolio-8.jpg"
-                    alt="ярлык проекта"
-                    width="370"
-                    height="294"
-                    class="product__img"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/img-portfolio-8.jpg    1x,
+                        ./images/img-portfolio-8-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/img-portfolio-8-tab.jpg    1x,
+                        ./images/img-portfolio-8-tab-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/img-portfolio-8-mob.jpg    1x,
+                        ./images/img-portfolio-8-mob-2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/img-portfolio-8-mob.jpg"
+                      alt="ярлык проекта"
+                      class="product__img"
+                    />
+                  </picture>
+
                   <div class="product__overlay">
                     <p class="product__description">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -323,13 +571,34 @@
             <li class="product">
               <a href="" class="product__link link">
                 <div class="product__wrap">
-                  <img
-                    src="./images/img-portfolio-9.jpg"
-                    alt="пример приложение"
-                    width="370"
-                    height="294"
-                    class="product__img"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/img-portfolio-9.jpg    1x,
+                        ./images/img-portfolio-9-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/img-portfolio-9-tab.jpg    1x,
+                        ./images/img-portfolio-9-tab-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/img-portfolio-9-mob.jpg    1x,
+                        ./images/img-portfolio-9-mob-2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/img-portfolio-9-mob.jpg"
+                      alt="пример приложение"
+                      class="product__img"
+                    />
+                  </picture>
                   <div class="product__overlay">
                     <p class="product__description">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -352,66 +621,68 @@
     </main>
     <footer class="footer">
       <div class="container footer__container">
-        <div class="footer__address">
-          <a href="" class="logo footer__logo link"
-            ><span class="logo__accent">Web</span>Studio</a
-          >
-          <address>
-            <ul class="footer__list list">
-              <li class="footer__item">
-                <a
-                  href="https://goo.gl/maps/TNpUosQZodaYW8YJA"
-                  target="_blank"
-                  rel="noopener noindex nofollow"
-                  class="footer__link footer__link--map link"
-                  >г. Киев, пр-т Леси Украинки, 26</a
-                >
+        <div class="footer__wrap">
+          <div class="footer__address">
+            <a href="" class="logo footer__logo link"
+              ><span class="logo__accent">Web</span>Studio</a
+            >
+            <address>
+              <ul class="footer__list list">
+                <li class="footer__item">
+                  <a
+                    href="https://goo.gl/maps/TNpUosQZodaYW8YJA"
+                    target="_blank"
+                    rel="noopener noindex nofollow"
+                    class="footer__link footer__link--map link"
+                    >г. Киев, пр-т Леси Украинки, 26</a
+                  >
+                </li>
+                <li class="footer__item">
+                  <a href="mailto:info@example.com" class="footer__link link"
+                    >info@example.com</a
+                  >
+                </li>
+                <li class="footer__item">
+                  <a href="tel:+380991111111" class="footer__link link"
+                    >+38 099 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="footer__social">
+            <h2 class="footer__title">присоединяйтесь</h2>
+            <ul class="social list">
+              <li class="social__item">
+                <a href="" class="social__link social__link--second link">
+                  <svg class="social__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="footer__item">
-                <a href="mailto:info@example.com" class="footer__link link"
-                  >info@example.com</a
-                >
+              <li class="social__item">
+                <a href="" class="social__link social__link--second link">
+                  <svg class="social__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="footer__item">
-                <a href="tel:+380991111111" class="footer__link link"
-                  >+38 099 111 11 11</a
-                >
+              <li class="social__item">
+                <a href="" class="social__link social__link--second link">
+                  <svg class="social__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="" class="social__link social__link--second link">
+                  <svg class="social__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
-        </div>
-        <div>
-          <h2 class="footer__title">присоединяйтесь</h2>
-          <ul class="social list">
-            <li class="social__item">
-              <a href="" class="social__link social__link--second link">
-                <svg class="social__icon" width="20" height="20">
-                  <use href="./images/icons.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a href="" class="social__link social__link--second link">
-                <svg class="social__icon" width="20" height="20">
-                  <use href="./images/icons.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a href="" class="social__link social__link--second link">
-                <svg class="social__icon" width="20" height="20">
-                  <use href="./images/icons.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a href="" class="social__link social__link--second link">
-                <svg class="social__icon" width="20" height="20">
-                  <use href="./images/icons.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+          </div>
         </div>
         <div class="form-sub">
           <h2 class="footer__title">Подпишитесь на рассылку</h2>
@@ -433,5 +704,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

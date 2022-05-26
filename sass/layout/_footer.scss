@@ -6,12 +6,35 @@
 }
 
 .footer__container {
-  display: flex;
-  align-items: baseline;
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: baseline;
+  }
 }
 
+.footer__wrap {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: baseline;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-bottom: 60px;
+  }
+}
 .footer__address {
-  margin-right: 70px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-right: 165px;
+    margin-left: 76px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 70px;
+  }
 }
 
 .footer__logo {
@@ -22,7 +45,10 @@
 }
 
 .footer__item:not(:last-child) {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 9px;
+  }
 }
 
 .footer__link {
@@ -46,6 +72,12 @@
   }
 }
 
+.footer__social {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
+}
+
 .footer__title {
   margin-bottom: 20px;
 
@@ -59,19 +91,25 @@
 }
 
 .form-sub {
-  margin-left: auto;
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 20px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: auto;
+  }
 }
 
 .form-sub__wrap {
-  display: flex;
-  align-items: center;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .form-sub__input {
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 16px;
-  width: 358px;
   height: 50px;
 
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -102,11 +140,27 @@
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
   }
+
+  @media screen and (max-width: 479px) {
+    width: 100%;
+  }
+
+  @media screen and (min-width: 480px) {
+    width: 450px;
+  }
+
+  @media screen and (max-width: 1198px) {
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: 1199px) {
+    width: 358px;
+    margin-right: 12px;
+  }
 }
 
 .form-sub__btn {
   display: flex;
-  margin-left: 12px;
   align-items: center;
   justify-content: center;
 }

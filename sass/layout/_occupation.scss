@@ -2,6 +2,10 @@
   padding-bottom: 94px;
 
   background-color: $firstBgColor;
+
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
 }
 
 .occupation__list {
